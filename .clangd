@@ -1,0 +1,69 @@
+If:
+  PathMatch: .*\.h
+CompileFlags:
+  Add:
+    - -xc-header
+  Remove:
+    - -xobjective-c++-header
+    - -xobjective-c*
+
+---
+
+CompileFlags:
+  Add:
+    - --target=avr
+    - -mmcu=atmega2560
+    - -DF_CPU=16000000UL
+    - -D__AVR_ATmega2560__
+    - -D__AVR_DEVICE_NAME__=atmega2560
+    - -isystem
+    - /usr/lib/avr/include
+    - -isystem
+    - /usr/lib/gcc/avr/7.3.0/include
+    - -isystem
+    - /usr/lib/gcc/avr/7.3.0/include-fixed
+    - -Isw/transponder
+    - -Isw/transponder/core/interfaces
+    - -Isw/transponder/core/error_handler
+    - -Isw/transponder/core/ring_buffer
+    - -Isw/transponder/core/protocol
+    - -Isw/transponder/core/packet_filter
+    - -Isw/transponder/core/gateway
+    - -Isw/transponder/drivers/uart/uart0
+    - -Isw/transponder/drivers/uart/uart1
+    - -Isw/transponder/drivers/led
+    - -Isw/transponder/drivers/timer
+    - -Icore/interfaces
+    - -Icore/error_handler
+    - -Icore/ring_buffer
+    - -Icore/protocol
+    - -Icore/packet_filter
+    - -Icore/gateway
+    - -Idrivers/uart/uart0
+    - -Idrivers/uart/uart1
+    - -Idrivers/led
+    - -Idrivers/timer
+    - -I../interfaces
+    - -I../error_handler
+    - -I../ring_buffer
+    - -I../protocol
+    - -I../packet_filter
+    - -I../gateway
+    - -I../../drivers/uart/uart0
+    - -I../../drivers/uart/uart1
+    - -I../../drivers/led
+    - -I../../drivers/timer
+    - -I../../../core/ring_buffer
+    - -I../../../core/interfaces
+    - -I../../../core/error_handler
+    - -I../../core/ring_buffer
+    - -I../../core/interfaces
+    - -I../../core/error_handler
+    - -std=gnu99
+  Remove:
+    - -save-temps
+    - -gstabs
+    - -fpack-struct
+    - -fshort-enums
+    - -xobjective-c++-header
+    - -xobjective-c*
