@@ -1,8 +1,8 @@
+# Transponder Firmware
+
 <p align="center">
   <img src="docs/transponder_logo.png" alt="Transponder Logo" width="180"/>
 </p>
-
-# Transponder Firmware
 
 > **High-Performance Serial Protocol Bridge & Packet Filter Firmware for ATmega2560**  
 > Bridging **idecobot** (Host PC) with **mycobot** serial bus servo motors.
